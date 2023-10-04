@@ -1,0 +1,1909 @@
+@font-face {
+  src: url("fonts/Yeseva+One.ttf");
+  font-family:"Yeseva+One";
+}
+
+* {
+margin: 0p;/*нужно прописывать сразу, до токо, как начал прописывать стили элементам*/
+padding: 0p;/*или не ставить вообще иначе, когда стили элементам выставлены уже и прописать эту фишку, стили в некоторых элементах нужно будет менять*/
+}
+
+::-webkit-scrollbar {
+  width : 2px; 
+  height: 10px;
+  pacity: 0.02;
+} /* УБРАЛ ПОЛОСУ ПРОКРУТКИ С ЭКРАНА и сделал свою. 
+Когда пишу сайт, чтобы на планшете отображалось содержимое от края до края страницы 
+без зазоров, прокрутку можно отключить. И включить для красоты по готовности сайта.*/
+
+::-webkit-scrollbar-button {height: 50px; background :#42e10e; }  /*2 - кнопка*/  
+
+::-webkit-scrollbar-track {background: #274dd7; }  /*3 - трек */ 
+
+::-webkit-scrollbar-track-piece { background: #e91e63;}  /*4 - видимая часть трека */ 
+
+::-webkit-scrollbar-thumb {background: #fbe100; border-radius: 10px;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); /*inset 1 3 13px rgb(207 10 10 / 64%)*/} /*5 - ползунок */ 
+
+/*настраивает полосу прокрутки с помощью вэбкит. С этими еще не разобрался*/
+
+/*::-webkit-scrollbar{ width: 22px; } /*1 - вертикальный скроллбар*/
+
+/*::-webkit-scrollbar:horizontal{ height: 22px;  }  /*1 - горизонтальный скроллбар*/
+
+/*::-webkit-scrollbar-button {background :#e50845; }  /*2 - кнопка*/  
+
+/*::-webkit-scrollbar-track {background: #008000; }  /*3 - трек */ 
+
+/*::-webkit-scrollbar-track-piece { background: #32CD32;}  /*4 - видимая часть трека */ 
+
+/*::-webkit-scrollbar-thumb {background: #322e76; border-radius: 10px;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); } /*5 - ползунок */ 
+
+/*::-webkit-scrollbar-corner {: #32CD32; }  6 - уголок */
+
+/*::-webkit-resizer { : #32CD32; } 7 - изменение размеров*/ 
+
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-image: url('https://highstar.ru/pictures/snejinki/09.gif');/*https://cdn.pixabay.com/photo/2018/01/22/13/07/sea-3098951_1280.jpg*/
+  background-size: cover;
+  ackground-repeat: no-repeat;
+  background-position: center center;
+  verflow: hidden;/*убирает полностью прокрутку с экрана*/
+  -webkit-resizer: /*— изменение размеров*/
+}
+
+/*.link {
+   text-decoration:none;
+   color:#ff0;
+   text-transform:uppercase;
+   background:#000;
+   padding: 20px 30px;
+   border-radius:30px;
+   border:3px solid #000;
+}
+.link:hover {
+   color:#000;
+   background:#fff;
+   border:3px solid #000;
+}*/
+
+.time {
+  position: absolute;
+  top: 174px;
+  left: 17px;
+  margin: 0; 
+  color: #ffe504; 
+  font-size: 30px;
+}
+
+.garland-5 {
+  position: absolute;
+  width: 434px;
+  height: 30px;
+  left: 129px;
+}
+
+.garland-4 {
+  position: absolute;
+  width: 190px;
+  height: 101px;
+  left: 568px;
+}
+
+.garland-6 {
+position: absolute;
+width: 434px;
+height: 30px;
+left: 754px;
+}
+
+.new-year_boll {
+margin-top: 15px;
+margin-left: 21px;
+box-shadow: 4px 0px 46px 8px coral; 
+}
+
+.showman2 {
+  position: absolute;
+  width: 75px;
+  top: 12px;
+  left: 1188px;
+  box-shadow: 0px 2px 25px 15px yellowgreen;   
+}
+
+.garland-3 {
+ position: absolute;
+ width: 1021px;
+ height: 101px;
+ top: 2913px;
+ z-index: 1; 
+}
+
+.salute3 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 102px; 
+  left: 171px;
+  border: 1px solid #601fd3;
+  border-radius: 110px;
+  box-shadow:0px 0px 67px 10px #39189d;
+}
+
+.slider_demonstration {
+  background-color: black;
+}
+
+.showflake {
+position: absolute;
+top: 196px;
+left: 474px;
+z-index: 1;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.btn-prev, .btn-next { 
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #f44336;
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.btn-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.btn-prev:hover, .btn-next:hover {
+  background-color: #bf88369e;
+}
+
+.dots-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 222px;
+  top: 493px;
+  right: 244px;     
+}
+
+.dot.active {
+  background-color: red;    
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color:#8693df; 
+  cursor: pointer; 
+  transition: background-color 0.6s ease;  
+}
+
+.slider-wrapper {
+  position: absolute;
+  display: flex;  
+  width: 688px;/*53%;*/
+  top: 213px;
+  left: 539px;
+  box-shadow: 0px 0px 44px 20px #ff9800;  	
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 479px;
+  top: 0px;
+  border-radius: 17p; 
+}
+
+.mySlides {
+  display:none;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-animation-name: slowing;
+  -webkit-animation-duration: 1.5s;
+  animation-name: slowing;
+  animation-duration: 1.5s;
+}
+
+@keyframes slowing {
+from {opacity: .5} 
+to {opacity: 1}
+}
+
+.filter_img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.8);/*drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.15));*/
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.slide-text {
+  position: absolute;
+  width: 162px;
+  right: 488px;
+  bottom: 536px;
+  color: #E3B873;
+
+  font-family: 'Yeseva One', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;  
+  text-transform: uppercase;
+}
+
+.mini-text1-slide {
+  position: absolute;
+  width: 231px;
+  top: 0px;
+  right: 944px;
+    
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 53px;
+  line-height: 21px;
+  color: #d91818;
+  text-shadow: 7px 7px 7px;	
+}
+
+.mini-text2-slide {
+  position: absolute;
+  width: 239px;
+  bottom: 0px;
+  right: 829px;
+
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 51px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-shadow: 7px 7px 7px;	
+}
+
+.mini-text3-slide {
+  position: absolute;
+  width: 238px;
+  bottom: 189px;
+  right: 888px;
+
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 21px;
+  color: #26cb23;
+  text-shadow: 7px 7px 7px;
+}
+
+.mini-text4-slide {
+  position: absolute;
+  width: 419px;
+  right: 740px;
+  bottom: 388px;
+  color: #fff;
+
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 51px;
+  line-height: 21px;
+  text-shadow: 6px 9px 10px;
+}
+
+.mini-text9-slide {
+position: absolute;
+  width: 449px;
+  right: 745px;
+  bottom: 397px;
+  color: #fff;
+
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 21px;
+  ext-shadow: 6px 9px 10px;  
+}
+
+.mini-text10-slide {
+position: absolute;
+  width: 456px;
+  right: 741px;
+  bottom: 388px;
+  color: #fff;
+
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 21px;
+  ext-shadow: 6px 9px 10px;
+}
+
+.photo-slide-4 {
+position: absolute;
+width: 441px;
+right: 734px;
+bottom: 63px;
+box-shadow: 0px 0px 37px 20px #d435d7;     
+}
+
+.photo-slide-6 {
+position: absolute;
+width: 441px;
+right: 734px;
+bottom: 16px;
+border-radius: 10px;
+box-shadow: 0px 2px 53px 26px #55bf55;          
+}
+
+.photo-slide-7 {
+position: absolute;
+    width: 331px;
+    right: 802px;
+    bottom: -3px;
+    border-radius: 64px;
+    box-shadow: 0px 0px 27px 29px yellow;  
+}
+
+.photo-slide-8 {
+position: absolute;
+    width: 443px;
+    right: 735px;
+    bottom: 60px;
+    border-radius: 82px;
+    box-shadow: 0px 4px 43px 24px red; 
+}
+
+.photo-slide-10 {
+ position: absolute;
+    width: 443px;
+    right: 755px;
+    bottom: 60px;
+    border-radius: 82px;
+    ox-shadow: 0px 4px 43px 24px red;  
+}
+
+.slide-text5 {
+position: absolute;
+width: 893px;
+right: 9px;
+bottom: 564px;
+color: #f00;
+
+font-family: 'Yeseva One';
+font-style: normal;
+font-weight: 400;
+font-size: 74px;
+text-shadow: -10px 10px 6px;
+text-transform: uppercase;
+}
+
+.slide-text6 {
+position: absolute;
+width: 943px;
+right: -3px;
+bottom: 600px;
+color: #e3739c;
+
+font-family: 'Yeseva One';
+font-style: normal;
+font-weight: 400;
+font-size: 67px;
+text-shadow: -10px 10px 6px;
+ext-transform: uppercase;      
+}
+
+.slide-text7 {
+position: absolute;
+width:941px;
+right: -13px;
+bottom: 584px;
+color: #5ee59a;
+
+font-family: 'Yeseva One';
+font-style: normal;
+font-weight: 400;
+font-size: 74px;
+text-shadow: -10px 10px 6px;
+ext-transform: uppercase;         
+}
+
+.slide-text8 {
+position: absolute;
+width: 960px;
+right: -17px;
+bottom: 586px;
+color: #ffa500;
+
+font-family: 'Yeseva One';
+font-style: normal;
+font-weight: 400;
+font-size: 74px;
+text-shadow: -10px 10px 6px;
+ext-transform: uppercase;      
+}
+
+.mini2-text4-slide {
+position: absolute;
+width: 423px;
+right: 738px;
+bottom: -50px;
+color: #fff;
+
+font-family: 'Nunito Sans', Arial, sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 51px;
+line-height: 21px;
+text-shadow: 7px 7px 7px;   
+}
+
+.mini2-text5-slide {
+position: absolute;
+width: 615px;
+right: 563px;
+bottom: -43px;
+color: #daa520;
+
+font-family: 'Nunito Sans', Arial, sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 48px;  
+}
+
+.mini2-text9-slide {
+position: absolute;
+width: 501px;
+right:713px;
+bottom: 106px;
+color: #cddc39;
+
+font-family: 'Nunito Sans', Arial, sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 48px;    
+}
+
+.congratulations {
+position: absolute;
+width: 375px;
+right: 187px;
+bottom: 79px;
+
+font-size: 47px;
+line-height: 56px;
+}
+
+.text-with-new {
+position: absolute;
+width: 284px;
+bottom: 79px;
+left: -29px;
+
+font-size: 47px;
+}
+
+.year {
+position: absolute;
+width: 406px;
+bottom: 79px;
+left: 242px;
+
+font-size: 47px;
+}
+
+.year1 {
+color: #ffeb3b; 
+font-weight: bold; 
+}
+
+.line {
+position: relative;
+display: inline-block;
+width: 153px;
+height: 1px;
+right: 0px;
+bottom: 523px;
+background-color: #E3B873; 
+}
+
+.numbertext {
+position: absolute;
+top: 5px;
+left: 9px;
+color: #efebe5;
+z-index: 1;
+}
+
+.menu-list {
+position: absolute;
+width: 743px;
+height: 16.32px;
+top: 122px;
+left: 510px;
+margin: 0 auto;
+}
+
+.list {
+display: flex;
+justify-content: space-between;
+
+font-family: 'Yeseva One', Arial, sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+list-style-type: none; 
+text-transform: uppercase;
+color: #ffffff38;
+}
+
+.list_item {
+padding-right: 82px;
+}
+
+.container-text {
+position: absolute;
+display: flex;
+flex-direction: column;
+top: 192px;
+left: 67px;
+}
+
+.h2 {
+width: 147px;
+height: 66px;
+bottom: 10px;
+
+font-family: 'Yeseva One';
+font-style: normal;
+font-weight: 400;
+font-size: 27px;
+line-height: 37px;
+letter-spacing: -0.07em;
+text-transform: uppercase;
+color: #E3B873;
+}
+
+.rectangle {
+position: absolute;
+width: 92px;
+height: 2px;
+top: 76px;
+left: 147px;
+}
+
+.text-p1 {
+width: 393px;
+height: 86px;
+bottom: 13px;
+
+font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 25px;
+color: #FFFFFF;
+}
+
+.container-mini-text {
+display: flex;
+bottom: 33px;
+}
+
+.mini-text-group {
+display: flex;
+flex-direction: column;
+}
+
+.h3 {
+width: 192px; 
+height: 22px;  
+
+font-family: 'Yeseva One';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+text-transform: uppercase;
+color: #E3B873;
+}
+
+.mini-text-p {
+width: 103px;
+height: 24px;
+bottom: 25px;
+
+font-family: 'Nunito Sans', Arial, sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+.mini-text-group2 {
+display: flex;
+flex-direction: column;
+}
+
+.garland-8 {
+position: absolute;
+width: 1186px;
+height: 44px;
+top: 514px;
+right: 0px;
+z-index: 1;   
+}
+
+.fly_santa {
+position: absolute;
+top: 770px;
+left: 17px;
+margin: 0 auto;
+}
+/*Элемент двигается по всей странице туда-обратно с разворотом*/
+@-webkit-keyframes mymove {
+  0% {
+    left: 0;
+  }
+  48% {
+    -webkit-transform: rotateY(0deg); 
+  }
+  50% { 
+    left: calc(85% - 100px);/*85% регулируют длину движения элемента*/
+    -webkit-transform: rotateY(180deg);
+  }
+  98% {
+    -webkit-transform: rotateY(180deg); 
+  }
+  100% {
+    left: 0;    
+     -webkit-transform: rotateY(0deg);
+  }
+}
+/*img*/#flying_santa {/*img нужно сделать если подключаю через скрипт*/
+position: absolute;
+width: 650p;
+eight: 64px;
+top: 789px;
+right: 242p;
+eft: 0;
+z-index: 2;
+-webkit-animation: linear infinite;
+-webkit-animation-name: mymove;
+-webkit-animation-duration: 75s;
+/*animation-direction: alternate-reverse; /*движение элемента вперёд и назад без разворота, подходит для кубиков, мячиков*
+  animation-duration: 5s;
+  animation-name: mymove;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;*/
+cursor: pointe;
+/*nimation-timing-function: linear;/*Линейная функция, анимация происходит равномерно на протяжении всего времени, без колебаний в скорости.*/
+/*nimation-direction: alternate; /*движение элемента слева вправо, потом пропадает и снова появляется слева*
+nimation-name: mymove;
+nimation: mymove 75s infinite; /*-iteration-count регулируется быстрота и медлительность движения*/
+/*animation-duration: 100s; /*регулируется быстрота и медлительность движения при включенном js*/
+/*transition: /*left 3s ease-in-out /*cubic-bezier(.65,.17,1,-0.08) 0s*/;/*можно использовать для движения анимации*/
+/*animation-delay: 500s;/*время через сколько запустится анимация*/
+/*animation-iteration-count: mymove ; /*сколько раз сработает, но пока не работает*/ 
+}
+/*
+@keyframes {
+from { left:0px; } можно использовать для движения эл-ов без разворота, таких как мячик, куб
+to { left:927px; } }/*ставим размер экрана, чтобы гугл исчезал если нужно
+}*/
+/*.img--mymove {
+animation-duration: 2s;
+animation-name: mymove;
+} эта схема для js, но пока не работает*/
+
+.block_falling-gifts {
+position: absolute;
+display: flex;
+justify-content: space-between;
+width: 24px;
+top: 87px;
+left: 108px;
+z-index: 1;
+}
+
+.falling-gifts {
+  width: 32px;
+  height: 107px;
+  margin-right:298px;
+}
+
+.blue-star {
+  position: absolute;
+  display: flex;
+  justify-content: space-between; 
+  width: 1218px;
+  top: 763p;
+  left: 11px;
+  z-index: 1;  
+}
+
+.blue-star2 {
+  position: absolute;
+  display: flex;
+  justify-content: space-between; 
+  top: 10px;
+  left: 34px;
+  z-index: 1;  
+}
+
+.star {
+  width: 14px;
+  height: 15px;
+  margin-right: 34px;
+}
+
+.star2 {
+ width: 15px;
+  height: 15px;
+  margin-right: 33px;   
+}
+
+.continer-salute {
+position: absolute;
+  display: flex;
+  justify-content: space-between; 
+  top: 33px;
+  left: 6p;
+  z-index: 1;  
+}
+
+.salute-small {
+ width: 94px;
+  height: 60px;
+  margin-right: 33p;   
+}
+
+.houses-fly_santa {
+position: absolute;
+display: flex;
+}
+
+.houses {
+ osition: absolute;
+width: 325p;
+height: 198px;
+top: 757p;
+right: 957p;
+z-index: ;
+box-shadow: -22px 0px 15px 15px rgb(112 85 221 / 95%);
+ransform: matrix(-1, 0, 0, 1, 0, 0);
+border-radius: 9p;
+}
+
+.houses3 {
+ osition: absolute;
+width: 301p;
+height: 198px;
+top: 757p;
+right: 355p;
+z-index: -1;
+box-shadow: 24px 0px 15px 15px rgb(112 85 221 / 95%);
+ransform: matrix(-1, 0, 0, 1, 0, 0);
+border-radius: 9p;
+}
+
+.houses5 {
+ osition: absolute;
+width: 301p;
+height: 198px;
+top: 757p;
+right: 656p;
+z-index: -1;
+box-shadow: 0px 0px 15px 15px rgb(112 85 221 / 95%);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+border-radius: 9p;
+}
+
+.houses6 {
+osition: absolute;
+width: 298px;
+height: 198px;
+top: 757p;
+right: 0p;
+z-index: ;
+box-shadow: -24px 0px 15px 15px rgb(112 85 221 / 95%);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+border-radius: 9p;
+}
+
+.garland-1 {
+position: absolute;
+width: 1242px;
+height: 57px; 
+top: 202px;
+}
+
+.block_acordions {
+  position: absolute;
+  top: 1041px;
+  left: 235px;
+}
+
+.accordions {
+position: absolute;
+width:827px;
+top: 975p;
+left: -11px;
+ox-shadow: 10px 4px 63px -19px rgb(14 14 12 / 99%/*255 255 0 / 99%*/);
+}  
+
+.accordions .contentBs {
+  position: relative;
+  height: auto;
+  margin: 10px 20px;
+}
+.accordions .contentBs .labels-accordions {
+  position: relative;
+  padding: 10px;
+  background: #194fe6;
+  color: #e39577;
+  cursor: pointer;
+  text-align: center;
+}
+
+.labels-accordions {
+  position: absolute;
+  bottom: 0px;
+  left: 1px;
+  font-size: 20px;
+  olor: #194fe6;
+}
+
+.accordions .contentBs .labels-accordions:before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+
+.accordions .contentBs.active .labels-accordions:before {
+  content: '-';
+}  
+
+.accordions .contentBs .contents {
+  overflow: hidden; / * контент скрыт * /
+  height: 0;
+  background: #f5deb3;
+  visibility: hidden; / * контент скрыт * /
+  transition: 0.5s;
+  overflow-y: auto;
+  animation-duration: 1.5s;
+}
+
+.accordions .contentBs.active .contents {
+  height: 302px;
+  padding: 10px;
+  visibility: visible; / * контент виден * /
+}
+
+.text-accordions {
+  text-transform: uppercas;
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: cente;
+  color: #ef2222; 
+}
+
+.wishes { color: #46cfcf; }
+
+.wishes1 { color: #3f51b5;}
+
+.wishes2 { color: #0d8111;  }
+
+.h4 {
+position: absolute;
+width: 152px;
+bottom: 200px;
+left: 622px;
+margin: 0 auto;
+}
+
+.accordions .contentBs.active .labels-accordions:before {
+-webkit-animation-name: slow;
+-webkit-animation-duration: 1.5s;
+animation-name: slow;
+animation-duration: 1.5s;
+}
+
+@keyframes slow {
+from {opacity: .5} 
+to {opacity: 1}
+}
+
+.house {
+  width: 150px;
+  height: 170px;
+}
+
+.car2 {
+  position: relative;
+  width: 150px;
+  height: 170px;
+  ottom: 39px;
+}
+
+.text-car2 {
+position: absolute;
+    top: 294px;
+    left: -80px;
+    font-size: 62px;
+}
+
+.sqrudg {
+  width: 150px;
+  height: 170px; 
+}
+
+.eggs {
+  width: 150px;
+  height: 170px;       
+}
+
+.santa {
+  width: 145px;
+  height: 170px;       
+}
+
+.common_acordions {
+
+}
+
+.garland-2 {
+  position: absolute;
+  width: 1236px;
+  bottom: 20px;
+}
+
+.tree1 {
+position: absolute;
+width: 212px;
+height: 440px;
+top: 1023p;
+right: 11px;
+border-radius: 46px;
+box-shadow: 0px 4px 27px 23px lightskyblue;
+}
+
+.santa_with_deers {
+ position: absolute;
+ width: 105px;
+ top: 355px;
+right: 95px; 
+}
+
+.salute9 {
+position: absolute;
+width: 84px;
+height: 74px;
+top: 15px;
+right: 128px;
+border-radius: 25px;
+z-index: 1;
+}
+
+.salute10 {
+ position: absolute;
+width: 92px;
+height: 97px;
+top: 28px;
+right: 15px;
+border-radius: 25px;
+z-index: 1;   
+}
+
+.salute11 {
+position: absolute;
+width: 60px;
+height: 85px;
+top: 147px;
+right: 149px;
+border-radius: 25px;
+z-index: 1;      
+}
+
+.salute12 {
+position: absolute;
+width: 76px;
+height: 84px;
+top: 175px;
+right: 13px;
+border-radius: 25px;
+z-index: 1;      
+}
+
+.salute {
+  position: absolute;
+  width: 803px;
+  height: 404px;
+  top: 53px;
+  left: 220p;
+  border: 5px solid #1c1c97;
+  border-radius: 37px;
+  z-index: -1;
+  box-shadow: 0px 21px 49px 2px #e91e63;
+}
+
+.stars14 {
+ position: absolute;
+ width: 15px;
+ height: 15px;
+ top: 144px;
+ right: 43px;
+ z-index: 1;      
+}
+
+.stars15 {
+ position: absolute;
+ width: 15px;
+ height: 15px;
+ top: 282px;
+ right: 36px;
+ z-index: 1;      
+}
+
+.stars16 {
+ position: absolute;
+ width: 15px;
+ height: 15px;
+ top: 14px;
+ right: 102px;
+ z-index: 1;      
+}
+
+.stars17 {
+ position: absolute;
+ width: 15px;
+ height: 15px;
+ top: 108px;
+ right: 165px;
+ z-index: 1;      
+}
+
+.stars18 {
+ position: absolute;
+ width: 15px;
+ height: 15px;
+ top: 258px;
+ right: 177px;
+ z-index: 1;      
+}
+
+.oval {
+position: absolute;
+width: 187px;
+height: 296px; 
+top: 1025p;
+left: 818px; 
+box-shadow: 0px 0px 52px 28px greenyellow;
+background-color: #15723dba;
+border-radius: 125px;   
+}
+
+abulous-animals {
+osition: absolute;
+width: /*203px*/;
+height: 100%/*151px*/;
+top: 313p;
+left: 821p;
+ursor: pointer;
+-webkit-transition: all 0.5s ease;/*медленное уменьшение фото*/
+transition: all 0.5s ease;/*медленное уменьшение фото*/
+}
+obulous-animals:hover {
+width: 270px;
+height: 400p;
+transition: all 2s ease-out .2s; /*фото медленно увеличивается*/ 
+transform: matrix(2, 1, 0, 2, -223, -140);  
+}
+
+.fabulous-animals_beauty-rotate {
+position: absolute; 
+width: 200px;
+height: 153px;
+top: 305px;
+left: 821px;
+border: 5px double #f00;
+border-radius: 35px;
+background-image: url("http://3rebenka.ru/wp-content/uploads/nygif/scene.gif");
+background-size: cover;
+box-shadow: 0px 0px 42px 21px #dba611; 
+overflow: hidden;
+-webkit-transition: all 0.5s ease;/*медленное уменьшение фото*/ 
+transition: all 0.5s ease;/*медленное уменьшение фото*/ 
+cursor: pointer;
+z-index: 2;
+}
+
+.fabulous-animals_beauty-rotate:hover/*, .beauty-rotate:active, .fabulous-animals:hover, .fabulous-animals:active*/{
+width: 667px;/*увеличивается и без помощи active, hover - фотка крутится и увеличивается */
+height:515px;
+top: 305px; 
+left: 138px;
+border-radius: /*50%*/3%;
+background-color: gold;
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);
+transition: all 2s ease-out .2s;/*фото медленно увеличивается*/
+ransform:matrix(5, 0, 0, 4, 311, 39);  
+}
+
+.change_rabbits {
+position: absolute;
+top: 1582px;
+left: 16px;
+}
+
+.newPhoto2_rabbit { 
+position: absolute;
+top: 1431p;
+left: 401px;
+margin: 0 auto;
+}
+
+.garland-7 {
+position: absolute;
+width: 1252px;
+height: 99px;
+bottom: -41px;
+z-index: 1;
+}
+
+.rabbit {
+width: 459px;
+height: 473px; 
+box-shadow: 0px 2px 55px 45px #cbdfeb;
+border-radius: 62px;
+background-color: #b0e0e6c9;
+}
+
+.santa-with-violin {
+position: absolute;
+width: 344px;
+top: 46px; 
+left: 23px;
+box-shadow: 0px 2px 80px 31px darkred;
+border-radius: 45px;     
+}
+
+.showman {
+position: absolute;
+width: 322px;     
+top: 46px;
+left: 900px;
+box-shadow: 2px 0px 56px 42px magenta;
+border-radius: 19px;
+}
+
+.block_walking-santa {
+position: absolute;
+top: 2145px;
+left: 25px;
+margin: 0 auto;  
+}
+
+.santa1 {
+position: absolute;
+width: 81px;
+top: 293px;
+left: 827px;
+animation-name: go;
+animation-delay: 500s;
+animation: go 45s infinite;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+z-index: 1;
+}
+
+@keyframes go {
+from { left:0px; }
+to { left:821px; } /*ставим размер экрана, чтобы гугл исчезал если нужно*/
+}
+
+.forest {
+position: absolute;
+width: 378px; /*100%;*/
+height: 404px;
+top: 1980p;
+right:878p;
+order: 1px solid #ff0;
+border-radius: 23px;
+z-index: ;
+box-shadow: -15px 0px 15px 15px #f44336;
+}
+
+.houses2 {
+position: absolute;
+width: 430px;
+height: 404px;
+top: 1982p; 
+left: 328px;
+order: 1px solid #ff0;
+border-radius: 12p;
+box-shadow: 18px 0px 15px 15px #f44336;
+ransform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.houses4 {
+position: absolute;
+width: 495px;
+height: 404px;
+top: 1982p;
+left: 741px;
+order: 1px solid #ff0;
+border-radius: 23px;
+box-shadow: -20px 0px 15px 15px #f44336;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.moon {
+position: absolute;
+width: 61px;
+top: 34px;
+left: 62px;
+border-radius: 80px;
+border: 1px solid #00f;
+box-shadow: 0px 0px 21px 23px blue;
+z-index: 1;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.salute2 {
+position: absolute;
+width: 112px;
+height: 102px;
+top: 20px;
+left: 1095px;
+border-radius: 771px;
+z-index: 1;
+}
+
+.salute4 {
+ position: absolute;
+ width: 92px;
+ height: 92px;
+ top: 5px;
+ left: 877px;
+ border-radius: 53px;
+ z-index: 1;   
+}
+
+.salute5 {
+position: absolute;
+width: 91px;
+height: 91px;
+top: 50px;
+left: 676px;
+border-radius: 53px;
+z-index: 1;
+}
+
+.salute6 {
+position: absolute;
+width: 133px;
+height: 60px;
+top: 5px;
+left: 669px;
+border-radius: 53px;
+z-index: 1;
+}
+
+.salute7 {
+position: absolute;
+width: 67px;
+height: 67px;
+top: 56px;
+left: 790px;
+border-radius: 53px;
+z-index: 1;       
+}
+
+.salute8 {
+position: absolute;
+width: 118px;
+height: 69px;
+top: 3px;
+left: 507px;
+border-radius: 53px;
+z-index: 1;       
+}
+
+.stars {
+ position: absolute;
+ width: 26px;
+ height: 26px;
+ top: 11px;
+ left: 24px;
+ border-radius: 42p;
+ z-index: 1;   
+}
+
+.stars2 {
+ position: absolute;
+ width: 30px;
+ height: 30px;
+ top: 110px;
+ left: 121px;
+ z-index: 1;   
+}
+
+.stars3 {
+position: absolute;
+ width: 30px;
+ height: 30px;
+ top: 65px;
+ left: 254px;
+ z-index: 1;   
+}
+
+.stars4 {
+ position: absolute;
+ width: 30px;
+ height: 30px;
+ top: 31px;
+ left: 214px;
+ z-index: 1;     
+}
+
+.stars5 {
+ position: absolute;
+ width: 25px;
+ height: 25px;
+ top: 64px;
+ left:13px;
+ z-index: 1;      
+}
+
+.stars6 {
+ position: absolute;
+ width: 30px;
+ height: 30px;
+ top: 114px;
+ left: 8px;
+ z-index: 1;      
+}
+
+.stars7 {
+position: absolute;
+ width: 25px;
+ height: 25px;
+ top: 10px;
+ left:162px;
+ z-index: 1;     
+}
+
+.stars8 {
+position: absolute;
+ width: 20px;
+ height: 20px;
+ top: 2px;
+ left: 92px;
+ z-index: 1;     
+}
+
+.stars9 {
+ position: absolute;
+ width: 42px;
+ height: 42px;
+ top: 42px;
+ left: 131px;
+ z-index: 1;        
+}
+
+.stars10 {
+ position: absolute;
+ width: 25px;
+ height: 25px;
+ top: 7px;
+ left: 256px;
+ z-index: 1;       
+}
+
+.stars11 {
+ position: absolute;
+ width: 15px;
+ height: 15px;
+ top: 102px;
+ left: 72px;
+ z-index: 1;      
+}
+
+.stars13 {
+ position: absolute;
+ width: 20px;
+ height: 20px;
+ top: 112px;
+ left: 257px;
+ z-index: 1;        
+}
+
+.stars12 {
+ position: absolute;
+ width: 62px;
+ height: 62px;
+ top: 36px;
+ left:415px;
+ z-index: 1;      
+}
+
+.stars19 {
+ position: absolute;
+ width: 48px;
+ height: 48px;
+ top: 3px;
+ left: 1000px;
+ z-index: 1;      
+}
+
+.stars20 {
+ position: absolute;
+ width: 48px;
+ height: 48px;
+ top: 97px;
+ left: 849px;
+ z-index: 1;      
+}
+
+.stars21 {
+position: absolute;
+ width: 49px;
+ height: 49px;
+ top: 127px;
+ left: 1184px;
+ z-index: 1;        
+}
+
+.stars22 {
+position: absolute;
+ width: 51px;
+ height: 46px;
+ top: 17px;
+ left: 801px;
+ z-index: 1;        
+}
+
+.stars23 {
+position: absolute;
+ width: 38px;
+ height: 38px;
+ top: 14px;
+ left: 632px;
+ z-index: 1;        
+}
+
+.stars24 {
+position: absolute;
+ width: 29px;
+ height: 29px;
+ top: 8px;
+ left: 1192px;
+ z-index: 1;        
+}
+
+.stars25 {
+position: absolute;
+ width: 38px;
+ height: 38px;
+ top: 141px;
+ left: 663px;
+ z-index: 1;        
+}
+
+.garland-9 {
+position: absolute;
+width: 1246px;
+top: 406px;
+z-index: 1;
+}
+
+.all_iframe {
+position: absolute;
+top: 2597px;
+left: 12px;
+}
+
+.iframe {
+position: absolute;
+width: 555px;
+top: 2435p;
+left: 357px;
+box-shadow: 0px 21px 86px 38px #21afe5f2;
+}
+
+.magic-ball {
+position: absolute;
+width: 325px;
+height: 350px;
+to 2414p;
+left: 17px;
+border-radius: 27px;
+z-index: -1;
+box-shadow: 0px 27px 80px 30px rgb(41 211 38 / 91%);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.cardOff_cone {
+ position: absolute;
+ bottom: -370px;
+left:885px; 
+}
+
+.cone {
+width: 319px;
+height: 354px;
+border-radius: 56px;
+box-shadow: -1px 2px 43px 21px gold;
+cursor: pointer;
+}
+
+.photoOff_santaInPipe {
+position: absolute;
+bottom: -95px;
+ left: 611px;
+ z-index: 1; 
+}
+
+.santaInPipe {
+isplay: block;
+width: 68px;
+cursor:none;     
+}
+
+.deer {
+position: absolute;  
+width: 168px;
+height: 168px;
+top: 2872px;
+left: 526px;
+cursor: grab;
+z-index: 1;
+}
+
+.all_friends {
+position: absolute;
+top: 3012px;
+left: 42px;
+-index: -1;    
+
+}
+
+.toy {
+  position: absolute;
+  width: 102px;
+  top: 3px;
+  right: 6px;
+  z-index: 1;   
+  border-radius: 25px;  
+}
+
+.figure_friends {
+idth:100%;
+height: 854p;
+border-radius: 14px;
+box-shadow: 4px 0px 34px 36px #9358e1;
+margin: 0 auto;
+ackground-image: url('https://bestgif.su/_ph/108/2/2370639.gif');
+bject-fit: cover; 
+}
+
+.friends {
+ idth: /*1202px100%*/;
+height: 854px/*100%*/;      
+}
+
+.copyrite {
+ position: absolute;
+  top: 3787px;
+  left: 68px;
+  color: #f44336;
+
+  font-size: 42px;
+  font-family: 'Yeseva One';
+  font-weight: 400;   
+}
+
+.copy {
+  color: #096ebf;
+}
+
+.dollar {
+  color: #008000;
+}
+
+.missing {
+  color: yellow;
+}
+
+.span:hove {
+border-bottom: 2px solid #2798f1;
+}
+
+.rectangle:hover, .line:hover {
+border: 2px solid #2798f1;
+}
+/*Можно добавить .dot:hover, но будут дергаться кнопки*/
+
+
+@media screen and (max-width: 1300px) {}
+
+@media screen and (max-width:1024px) {
+
+.showman2 {left: 1171px;}
+
+.fly_santa {left: 3px;}
+
+@-webkit-keyframes mymove {
+  0% {
+    left: 0;
+  }
+  48% {
+    -webkit-transform: rotateY(0deg); 
+  }
+  50% { 
+    left: calc(101% - 100px);/*85% регулируют длину движения элемента*/
+    -webkit-transform: rotateY(180deg);
+  }
+  98% {
+    -webkit-transform: rotateY(180deg); 
+  }
+  100% {
+    left: 0;    
+     -webkit-transform: rotateY(0deg);
+  }
+}
+#flying_santa {
+position: absolute;
+top: 789px;
+z-index: 2;
+-webkit-animation: linear infinite;
+-webkit-animation-name: mymove;
+-webkit-animation-duration: 75s;
+}
+
+.houses6 { width: 296px; }
+
+.tree1 { right: 8px; }
+
+.fabulous-animals { left: 814px; }
+
+.slide-text6 { width: 1022px;right: -8px;font-size: 67px;}
+
+.slide-text7 {width: 1011px;right: -16px;font-size: 74px;}
+
+.slide-text8 {width: 1022px;right: -17px;font-size: 74px;}
+
+.santa {width: 140px;height: 162px;}
+
+.block_acordions {left: 223px;}
+
+.h4 {  }
+
+.change_rabbits { left: 5px; }
+
+.block_walking-santa  { left: 10px; }
+
+.all_iframe{ left: -3px; }
+
+.text-friends {width: 1207px; left: 3px;font-size: 124px;}
+
+.all_friends { left: 27px; }
+}
+
+@media screen and (max-width: 800px) {
+@-webkit-keyframes mymove {
+  0% {
+    left: 0;
+  }
+  48% {
+    -webkit-transform: rotateY(0deg); 
+  }
+  50% { 
+    left: calc(136% - 100px);/*85% регулируют длину движения элемента*/
+    -webkit-transform: rotateY(180deg);
+  }
+  98% {
+    -webkit-transform: rotateY(180deg); 
+  }
+  100% {
+    left: 0;    
+     -webkit-transform: rotateY(0deg);
+  }
+}
+#flying_santa {
+position: absolute;
+top: 789px;
+z-index: 2;
+-webkit-animation: linear infinite;
+-webkit-animation-name: mymove;
+-webkit-animation-duration: 75s;
+}
+}
+
+@media screen and (max-width: 768px) {
+
+.showman2 {left: 1171px;}
+
+@-webkit-keyframes mymove {
+  0% {
+    left: 0;
+  }
+  48% {
+    -webkit-transform: rotateY(0deg); 
+  }
+  50% { 
+    left: calc(136% - 100px);/*85% регулируют длину движения элемента*/
+    -webkit-transform: rotateY(180deg);
+  }
+  98% {
+    -webkit-transform: rotateY(180deg); 
+  }
+  100% {
+    left: 0;    
+     -webkit-transform: rotateY(0deg);
+  }
+}
+#flying_santa {
+position: absolute;
+top: 789px;
+z-index: 2;
+-webkit-animation: linear infinite;
+-webkit-animation-name: mymove;
+-webkit-animation-duration: 75s;
+}
+
+.tree1 { right: 8px; }
+
+.fabulous-animals { left: 814px; }
+
+.slide-text6 { width: 987px;right: -8px;font-size: 67px;} 
+
+.slide-text7 { width: 1011px;right: -16px;font-size: 74px;}
+
+.slide-text8 { width: 1022px;right: -17px;font-size: 74px;}
+
+.houses6 { width: 294px; } 
+
+.block_acordions { left: 226px; }
+
+.h4 {  }
+
+.change_rabbits { left: 4px; }
+
+.text-friends {width: 1207px; left: 3px;font-size: 124px;  }
+
+.all_friends { left: 27px; }
+}
+
+@media screen and (max-width: 425px) {
+
+.showman2 {left: 1171px;}
+
+@-webkit-keyframes mymove {
+  0% {
+    left: 0;
+  }
+  48% {
+    -webkit-transform: rotateY(0deg); 
+  }
+  50% { 
+    left: calc(241% - 100px);/*85% регулируют длину движения элемента*/
+    -webkit-transform: rotateY(180deg);
+  }
+  98% {
+    -webkit-transform: rotateY(180deg); 
+  }
+  100% {
+    left: 0;    
+     -webkit-transform: rotateY(0deg);
+  }
+}
+#flying_santa {
+position: absolute;
+top: 789px;
+z-index: 2;
+-webkit-animation: linear infinite;
+-webkit-animation-name: mymove;
+-webkit-animation-duration: 75s;
+}
+
+.tree1 { right: 8px; }
+
+.fabulous-animals { left: 814px; }
+
+.slide-text6 { width: 973px;right: -8px;font-size: 67px;}
+
+.slide-text7 {width: 1011px;right: -16px;font-size: 74px;}
+
+.slide-text8 {position: absolute;width: 1022px;right: -17px;font-size: 74px;}
+
+.h4 {  }
+
+.text-friends {width: 1207px; left: 3px;font-size: 124px; }
+
+.all_friends { left: 27px; }
+}
+
+@media screen and (max-width: 375px) {
+
+.showman2 {left: 1171px;}
+
+@-webkit-keyframes mymove {
+  0% {
+    left: 0;
+  }
+  48% {
+    -webkit-transform: rotateY(0deg); 
+  }
+  50% { 
+    left: calc(278% - 100px);/*85% регулируют длину движения элемента*/
+    -webkit-transform: rotateY(180deg);
+  }
+  98% {
+    -webkit-transform: rotateY(180deg); 
+  }
+  100% {
+    left: 0;    
+     -webkit-transform: rotateY(0deg);
+  }
+}
+#flying_santa {
+position: absolute;
+top: 789px;
+z-index: 2;
+-webkit-animation: linear infinite;
+-webkit-animation-name: mymove;
+-webkit-animation-duration: 75s;
+}
+
+.tree1 { right: 8px; }
+
+.fabulous-animals { left: 814px; }
+
+.slide-text6 { width: 975px;right: -8px;font-size: 67px;}
+
+.slide-text7 {width: 1011px;right: -16px;font-size: 74px;}
+
+.slide-text8 {position: absolute;width: 1022px;right: -17px;font-size: 74px;}
+
+.h4 {  }
+
+.text-friends {width: 1207px; left: 3px;font-size: 124px;}
+
+.all_friends { left: 27px; }
+}
